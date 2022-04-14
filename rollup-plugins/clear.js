@@ -1,11 +1,18 @@
-export default function clear() {
+import fs from 'fs-extra';
+import path from 'path';
+
+const resolve = filePath => path.join(__dirname, filePath);
+
+export default function clear(target) {
   return {
     name: 'clear',
-    resolveId(source) {
-      console.log('resolveId', source);
-    },
-    load(id) {
-      console.log('load', id);
+    buildStart() {
+      if (!target) {
+        console.log('缺少目标路径 target');
+        return null;
+      }
+      const absolutePath = resolve(target);
+      fs.removeSync(absolutePath);
     },
   };
 }
