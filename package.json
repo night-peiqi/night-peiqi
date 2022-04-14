@@ -1,0 +1,33 @@
+{
+  "name": "night-peiqi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/es/index.js",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "keywords": [
+    "LazyImage"
+  ],
+  "files": [
+    "lib"
+  ],
+  "author": "night-peiqi",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@types/react": "^18.0.1",
+    "less": "^4.1.2",
+    "postcss": "^8.4.12",
+    "rollup": "^2.70.1",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.31.2",
+    "tslib": "^2.3.1",
+    "typescript": "^4.6.3"
+  }
+}
